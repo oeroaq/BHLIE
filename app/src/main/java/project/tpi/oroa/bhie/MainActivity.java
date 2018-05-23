@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
     private RotationGestureDetectorHelper mRotationDetector;
     private int mPtrCount = 0;
     private MotionEvent motionEvent;
-    private String objName = "models/andy.obj", textureName = "models/andy.jpg";
+    private String objName = "models/free3Dmodel.obj", textureName = "models/andy.png";
     private boolean isObjReplaced;
     private ScaleGesturesHelper scaleGestureDetector;
 
@@ -106,8 +106,7 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
                 new GestureDetector.SimpleOnGestureListener() {
                     @Override
                     public boolean onSingleTapConfirmed(MotionEvent e) {
-                        queuedSingleTaps.offer(e);
-
+                        queuedSingleTaps.offer(motionEvent);
                         return true;
                     }
 
@@ -347,7 +346,7 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
                             || (trackable instanceof Point
                             && ((Point) trackable).getOrientationMode()
                             == Point.OrientationMode.ESTIMATED_SURFACE_NORMAL)) {
-                        if (anchors.size() >= 5) {
+                        if (anchors.size() >= 1) {
                             anchors.get(0).detach();
                             anchors.remove(0);
                         }
