@@ -13,6 +13,7 @@ import project.tpi.oroa.bhie.common.rendering.ObjectRenderer;
 public class ObjectRendering {
     public  Anchor anchor;
     public  String nameObject;
+    public  int numberObject;
     private final float[] centerVertexOfCube = {0f, 0f, 0f, 1};
     private final float[] vertexResult = new float[4];
     private final float objectHitAreaRadius = 0.2f;

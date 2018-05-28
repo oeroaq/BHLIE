@@ -33,8 +33,8 @@
             android:layout_height="match_parent"
             android:layout_marginEnd="15dp"
             android:background="#2bffffff"
-            android:onClick="onClickMenuLevel"
-            app:srcCompat="@drawable/ic_149404" />
+            app:srcCompat="@drawable/ic_149404"
+            android:contentDescription="@string/todo" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,23 +44,25 @@
         android:background="@android:color/transparent"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/imageButton2"
+        <TextView
+            android:id="@+id/scorePositiveText"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:contentDescription="@android:string/VideoView_error_button"
-            app:srcCompat="@android:drawable/btn_star_big_on" />
+            android:text="@string/palabras_correctas_0"
+            android:textSize="20sp" />
 
-        <ImageButton
-            android:id="@+id/imageButton"
+        <TextView
+            android:id="@+id/scoreNegativeText"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:contentDescription="@android:string/search_go"
-            app:srcCompat="@mipmap/ic_launcher_round" />
+            android:text="@string/palabras_incorrectas_0"
+            android:textSize="20sp" />
     </LinearLayout>
 
 

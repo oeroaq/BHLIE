@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">BHIE</string>
+    <string name="palabras_correctas_0">Palabras correctas: 0</string>
+    <string name="palabras_incorrectas_0">Palabras incorrectas: 0</string>
+    <string name="todo">TODO</string>
 </resources>

@@ -12,6 +12,7 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.ar.core.Anchor;
@@ -30,8 +31,6 @@ import com.google.ar.core.TrackingState;
 
 import project.tpi.oroa.bhie.common.global.ObjectRendering;
 import project.tpi.oroa.bhie.common.rendering.BackgroundRenderer;
-import project.tpi.oroa.bhie.common.rendering.ObjectRenderer;
-import project.tpi.oroa.bhie.common.rendering.ObjectRenderer.BlendMode;
 import project.tpi.oroa.bhie.common.rendering.PlaneRenderer;
 import project.tpi.oroa.bhie.common.rendering.PointCloudRenderer;
 
@@ -54,7 +53,6 @@ import project.tpi.oroa.bhie.common.helpers.RotationGestureDetectorHelper;
 import project.tpi.oroa.bhie.common.helpers.DisplayRotationHelper;
 import project.tpi.oroa.bhie.common.helpers.ScaleGesturesHelper;
 import project.tpi.oroa.bhie.common.helpers.CameraPermissionHelper;
-import project.tpi.oroa.bhie.common.rendering.ShaderUtil;
 
 import java.util.concurrent.BlockingQueue;
 
@@ -77,13 +75,15 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
     private DisplayRotationHelper displayRotationHelper;
 
     private final BackgroundRenderer backgroundRenderer = new BackgroundRenderer();
-    private final ObjectRenderer virtualObject = new ObjectRenderer();
     private final PlaneRenderer planeRenderer = new PlaneRenderer();
     private final PointCloudRenderer pointCloud = new PointCloudRenderer();
 
     // Temporary matrix allocated here to reduce number of allocations for each frame.
     private final float[] anchorMatrix = new float[16];
     private final int maxObjects = 7;
+    private int objectNumber = 0;
+    private int scorePositive = 0;
+    private int scoreNegative = 0;
     // Tap handling and UI.
     private final BlockingQueue<MotionEvent> queuedSingleTaps = new ArrayBlockingQueue<>(maxObjects);
     private final ArrayList<ObjectRendering> anchors = new ArrayList<>();
@@ -93,11 +93,18 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
     private boolean isObjReplaced;
     private ScaleGesturesHelper scaleGestureDetector;
 
+
+    private TextView scorePositiveText;
+    private TextView scoreNegativeText;
+
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        scorePositiveText = findViewById(R.id.scorePositiveText);
+        scoreNegativeText = findViewById(R.id.scoreNegativeText);
         surfaceView = findViewById(R.id.surfaceview);
         displayRotationHelper = new DisplayRotationHelper(/*context=*/ this);
         mRotationDetector = new RotationGestureDetectorHelper(this);
@@ -338,24 +345,39 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
                             || (trackable instanceof Point
                             && ((Point) trackable).getOrientationMode()
                             == Point.OrientationMode.ESTIMATED_SURFACE_NORMAL)) {
-                        if (anchors.size() == 0) {
+                        if (anchors.size() < maxObjects) {
                             Anchor anchor = hit.createAnchor();
-                            for (int i = 0; i < maxObjects; i++) {
-                                ObjectRendering object = new ObjectRendering();
-                                object.nameObject = "word_" + i;
-                                if (i == 0) {
-                                    object.nameObject = "andy";
-                                }
-                                object.anchor = anchor;
-                                object.setVirtualObject(this);
-                                anchors.add(object);
+                            ObjectRendering object = new ObjectRendering();
+                            object.nameObject = "word_" + objectNumber;
+                            object.numberObject = objectNumber;
+                            if (objectNumber == 0) {
+                                object.nameObject = "andy";
                             }
+                            object.anchor = anchor;
+                            object.setVirtualObject(this);
+                            anchors.add(object);
+                            objectNumber++;
 
-                        }
-                        else {
-                            for(ObjectRendering object : anchors){
-                                if(object.isTapInObject(tap)){
-                                    Log.e(TAG,object.nameObject);
+                        } else {
+                            for (ObjectRendering object : anchors) {
+                                if (object.numberObject != 0) {
+                                    if (object.isTapInObject(tap)) {
+                                        if (object.numberObject % 2 != 0)
+                                            scorePositive++;
+                                        else
+                                            scoreNegative++;
+
+                                        final String positivo = "Palabras correctas: " + scorePositive;
+                                        final String negativo = "Palabras incorrectas: " + scoreNegative;
+                                        runOnUiThread(new Runnable() {
+
+                                            @Override
+                                            public void run() {
+                                                scorePositiveText.setText(positivo);
+                                                scoreNegativeText.setText(negativo);
+                                            }
+                                        });
+                                    }
                                 }
                             }
 
@@ -488,4 +510,6 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
         float angle = rotationDetector.getAngle();
         GlobalClass.rotateF = GlobalClass.rotateF + angle / 10;
     }
+
+
 }
