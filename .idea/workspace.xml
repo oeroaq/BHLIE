@@ -12,10 +12,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4b149afd-ae34-4575-933e-fca0a4b50236" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/global/GlobalClass.java" afterPath="$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/global/GlobalClass.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/global/ObjectRendering.java" afterPath="$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/global/ObjectRendering.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/rendering/ObjectRenderer.java" afterPath="$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/rendering/ObjectRenderer.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/models/andy.obj" afterPath="$PROJECT_DIR$/app/src/main/assets/models/andy.obj" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/models/free3Dmodel.obj" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/models/trigrid.png" afterPath="$PROJECT_DIR$/app/src/main/assets/models/trigrid.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/models/word_1.obj" afterPath="$PROJECT_DIR$/app/src/main/assets/models/word_1.obj" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,15 +38,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="296" column="9" lean-forward="true" selection-start-line="296" selection-start-column="9" selection-end-line="296" selection-end-column="9" />
+              <caret line="296" column="9" lean-forward="false" selection-start-line="296" selection-start-column="9" selection-end-line="296" selection-end-column="9" />
               <folding>
                 <element signature="e#19567#19772#0" expanded="true" />
                 <element signature="e#19771#19772#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="word_1.obj" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/models/word_1.obj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="word_2.obj" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/models/word_2.obj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,7 +76,19 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="14">
               <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
+              <folding>
+                <marker date="1526219543568" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1526219543568" expanded="true" signature="258:328" ph="{...}" />
+                <marker date="1526219543568" expanded="true" signature="356:424" ph="{...}" />
+                <marker date="1526219543568" expanded="true" signature="465:698" ph="{...}" />
+                <marker date="1526219543568" expanded="false" signature="725:736" ph=" { " />
+                <marker date="1526219543568" expanded="false" signature="786:792" ph=" }" />
+                <marker date="1526219543568" expanded="true" signature="841:979" ph="{...}" />
+                <marker date="1526219543568" expanded="true" signature="1010:1098" ph="{...}" />
+                <marker date="1526219543568" expanded="true" signature="1131:1223" ph="{...}" />
+                <marker date="1526219543568" expanded="true" signature="1261:1414" ph="{...}" />
+                <marker date="1526219543568" expanded="true" signature="1449:1594" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2622,14 +2654,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/helpers/DisplayRotationHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/helpers/FullScreenHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -2932,14 +2956,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/models/word_1.obj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4200">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/assets/models/word_1.mtl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -3016,18 +3032,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
+          <folding>
+            <marker date="1526219543568" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1526219543568" expanded="true" signature="258:328" ph="{...}" />
+            <marker date="1526219543568" expanded="true" signature="356:424" ph="{...}" />
+            <marker date="1526219543568" expanded="true" signature="465:698" ph="{...}" />
+            <marker date="1526219543568" expanded="false" signature="725:736" ph=" { " />
+            <marker date="1526219543568" expanded="false" signature="786:792" ph=" }" />
+            <marker date="1526219543568" expanded="true" signature="841:979" ph="{...}" />
+            <marker date="1526219543568" expanded="true" signature="1010:1098" ph="{...}" />
+            <marker date="1526219543568" expanded="true" signature="1131:1223" ph="{...}" />
+            <marker date="1526219543568" expanded="true" signature="1261:1414" ph="{...}" />
+            <marker date="1526219543568" expanded="true" signature="1449:1594" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="296" column="9" lean-forward="true" selection-start-line="296" selection-start-column="9" selection-end-line="296" selection-end-column="9" />
+          <caret line="296" column="9" lean-forward="false" selection-start-line="296" selection-start-column="9" selection-end-line="296" selection-end-column="9" />
           <folding>
             <element signature="e#19567#19772#0" expanded="true" />
             <element signature="e#19771#19772#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/models/word_1.obj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/models/word_2.obj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
