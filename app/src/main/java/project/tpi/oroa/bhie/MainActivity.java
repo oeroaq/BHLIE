@@ -444,7 +444,10 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
                 object.anchor.getPose().toMatrix(anchorMatrix, 0);
 
                 // Update and draw the model and its shadow.
-                object.getVirtualObject().updateModelMatrix(anchorMatrix, GlobalClass.scaleFactor);
+                float scale = GlobalClass.scaleFactor;
+                if (object.numberObject == 0)
+                    scale = 0.0009f;
+                object.getVirtualObject().updateModelMatrix(anchorMatrix, scale);
                 object.getVirtualObject().draw(viewmtx, projmtx, lightIntensity);
 
             }
