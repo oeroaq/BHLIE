@@ -28,6 +28,7 @@ import com.google.ar.core.Session;
 import com.google.ar.core.Trackable;
 import com.google.ar.core.TrackingState;
 
+import project.tpi.oroa.bhie.common.global.ObjectRendering;
 import project.tpi.oroa.bhie.common.rendering.BackgroundRenderer;
 import project.tpi.oroa.bhie.common.rendering.ObjectRenderer;
 import project.tpi.oroa.bhie.common.rendering.ObjectRenderer.BlendMode;
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
 
     // Tap handling and UI.
     private final BlockingQueue<MotionEvent> queuedSingleTaps = new ArrayBlockingQueue<>(16);
-    private final ArrayList<Anchor> anchors = new ArrayList<>();
+    private final ArrayList<ObjectRendering> anchors = new ArrayList<>();
     private RotationGestureDetectorHelper mRotationDetector;
     private int mPtrCount = 0;
     private MotionEvent motionEvent;
@@ -106,13 +107,16 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
                 new GestureDetector.SimpleOnGestureListener() {
                     @Override
                     public boolean onSingleTapConfirmed(MotionEvent e) {
-                        queuedSingleTaps.offer(motionEvent);
+                        queuedSingleTaps.offer(e);
                         return true;
                     }
 
                     @Override
                     public boolean onDoubleTap(MotionEvent e) {
-                        GlobalClass.scaleFactor += GlobalClass.scaleFactor;
+                        if (GlobalClass.scaleFactor < GlobalClass.maxScaleFctor)
+                            GlobalClass.scaleFactor += GlobalClass.scaleFactor;
+                        else
+                            GlobalClass.scaleFactor = GlobalClass.minEscaleFactor;
                         return true;
                     }
 
@@ -288,8 +292,6 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
             backgroundRenderer.createOnGlThread(this);
             planeRenderer.createOnGlThread(this, "models/trigrid.png");
             pointCloud.createOnGlThread(this);
-            virtualObject.createOnGlThread(this, objName, textureName);
-            virtualObject.setMaterialProperties(0.0f, 2.0f, 0.5f, 6.0f);
 
         } catch (IOException e) {
             Log.e(TAG, "Failed to read an asset file", e);
@@ -342,15 +344,17 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
             if (tap != null && camera.getTrackingState() == TrackingState.TRACKING) {
                 for (HitResult hit : frame.hitTest(tap)) {
                     Trackable trackable = hit.getTrackable();
-                    if ((trackable instanceof Plane && ((Plane)trackable).isPoseInPolygon(hit.getHitPose()))
+                    if ((trackable instanceof Plane && ((Plane) trackable).isPoseInPolygon(hit.getHitPose()))
                             || (trackable instanceof Point
                             && ((Point) trackable).getOrientationMode()
                             == Point.OrientationMode.ESTIMATED_SURFACE_NORMAL)) {
-                        if (anchors.size() >= 1) {
-                            anchors.get(0).detach();
-                            anchors.remove(0);
+                        ObjectRendering object = new ObjectRendering();
+                        if (anchors.size() == 0) {
+                            object.anchor = hit.createAnchor();
+                            object.nameObject = "andy";
+                            object.setVirtualObject(this);
                         }
-                        anchors.add(hit.createAnchor());
+                        anchors.add(object);
                         break;
                     }
                 }
@@ -400,19 +404,18 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
             planeRenderer.drawPlanes(
                     planes, camera.getDisplayOrientedPose(), projmtx);
 
-            for (Anchor anchor : anchors) {
-                if (anchor.getTrackingState() != TrackingState.TRACKING) {
+            for (ObjectRendering object : anchors) {
+                if (object.anchor.getTrackingState() != TrackingState.TRACKING) {
                     continue;
                 }
                 // Get the current pose of an Anchor in world space. The Anchor pose is updated
                 // during calls to session.update() as ARCore refines its estimate of the world.
-                anchor.getPose().toMatrix(anchorMatrix, 0);
+                object.anchor.getPose().toMatrix(anchorMatrix, 0);
 
                 // Update and draw the model and its shadow.
-                virtualObject.updateModelMatrix(anchorMatrix, GlobalClass.scaleFactor);
-                virtualObject.draw(viewmtx, projmtx, lightIntensity);
+                object.getVirtualObject().updateModelMatrix(anchorMatrix, GlobalClass.scaleFactor);
+                object.getVirtualObject().draw(viewmtx, projmtx, lightIntensity);
             }
-
 
 
         } catch (Throwable t) {

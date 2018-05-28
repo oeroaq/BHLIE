@@ -11,13 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b149afd-ae34-4575-933e-fca0a4b50236" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/global/ObjectRendering.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/global/GlobalClass.java" afterPath="$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/global/GlobalClass.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/rendering/ObjectRenderer.java" afterPath="$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/rendering/ObjectRenderer.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/global/ObjectRendering.java" afterPath="$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/global/ObjectRendering.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,118 +34,141 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="354" column="51" lean-forward="true" selection-start-line="354" selection-start-column="51" selection-end-line="354" selection-end-column="51" />
-              <folding>
-                <element signature="e#5809#7061#0" expanded="true" />
-                <element signature="e#7060#7061#0" expanded="true" />
-                <element signature="e#18701#18920#0" expanded="true" />
-                <element signature="e#18919#18920#0" expanded="true" />
-                <element signature="e#18984#19321#0" expanded="true" />
-                <element signature="e#19320#19321#0" expanded="true" />
-                <element signature="e#19452#19657#0" expanded="true" />
-                <element signature="e#19656#19657#0" expanded="true" />
-                <element signature="e#19746#20056#0" expanded="true" />
-                <element signature="e#20055#20056#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GLSurfaceView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Android/Sdk/sources/android-24/android/opengl/GLSurfaceView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="1531" column="0" lean-forward="false" selection-start-line="1531" selection-start-column="0" selection-end-line="1531" selection-end-column="0" />
-              <folding>
-                <element signature="e#64725#64726#0" expanded="true" />
-                <element signature="e#64807#64808#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Trace.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Android/Sdk/sources/android-24/android/os/Trace.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GlobalClass.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/global/GlobalClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="44" lean-forward="false" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ObjectRendering.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/global/ObjectRendering.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Anchor.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/d8f23de0ee690a2ea58daaeb447fb713/jars/classes.jar!/com/google/ar/core/Anchor.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-294">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <marker date="1526219543568" expanded="false" signature="0:104" ph="/.../" />
-                <marker date="1526219543568" expanded="true" signature="306:376" ph="{...}" />
-                <marker date="1526219543568" expanded="true" signature="401:469" ph="{...}" />
-                <marker date="1526219543568" expanded="true" signature="510:737" ph="{...}" />
-                <marker date="1526219543568" expanded="false" signature="764:775" ph=" { " />
-                <marker date="1526219543568" expanded="false" signature="825:831" ph=" }" />
-                <marker date="1526219543568" expanded="true" signature="880:1015" ph="{...}" />
-                <marker date="1526219543568" expanded="true" signature="1043:1131" ph="{...}" />
-                <marker date="1526219543568" expanded="true" signature="1177:1299" ph="{...}" />
-                <marker date="1526219543568" expanded="true" signature="1338:1435" ph="{...}" />
-                <marker date="1526219543568" expanded="true" signature="1494:1629" ph="{...}" />
-                <marker date="1526219543568" expanded="false" signature="1655:1666" ph=" { " />
-                <marker date="1526219543568" expanded="false" signature="1730:1736" ph=" }" />
-                <marker date="1526219543568" expanded="true" signature="2181:3398" ph="{...}" />
-                <marker date="1526219543568" expanded="false" signature="2702:2717" ph=" { " />
-                <marker date="1526219543568" expanded="false" signature="2740:2750" ph=" }" />
-                <marker date="1526219543568" expanded="false" signature="2790:2805" ph=" { " />
-                <marker date="1526219543568" expanded="false" signature="2832:2842" ph=" }" />
-                <marker date="1526219543568" expanded="true" signature="2910:3392" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ObjectRenderer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/rendering/ObjectRenderer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="40" column="27" lean-forward="false" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#15818#15819#0" expanded="true" />
-                <element signature="e#15866#15867#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/MainActivity.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="792">
+                  <caret line="335" column="32" lean-forward="false" selection-start-line="335" selection-start-column="32" selection-end-line="335" selection-end-column="32" />
+                  <folding>
+                    <element signature="e#5906#7158#0" expanded="true" />
+                    <element signature="e#7157#7158#0" expanded="true" />
+                    <element signature="e#18487#18706#0" expanded="true" />
+                    <element signature="e#18705#18706#0" expanded="true" />
+                    <element signature="e#18770#19107#0" expanded="true" />
+                    <element signature="e#19106#19107#0" expanded="true" />
+                    <element signature="e#19238#19445#0" expanded="true" />
+                    <element signature="e#19444#19445#0" expanded="true" />
+                    <element signature="e#19534#19844#0" expanded="true" />
+                    <element signature="e#19843#19844#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="GLSurfaceView.java" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/Android/Sdk/sources/android-24/android/opengl/GLSurfaceView.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="58">
+                  <caret line="1531" column="0" lean-forward="false" selection-start-line="1531" selection-start-column="0" selection-end-line="1531" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#64725#64726#0" expanded="true" />
+                    <element signature="e#64807#64808#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Trace.java" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/Android/Sdk/sources/android-24/android/os/Trace.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="187">
+                  <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="GlobalClass.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/global/GlobalClass.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="44" lean-forward="false" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ObjectRendering.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/global/ObjectRendering.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="434">
+                  <caret line="31" column="8" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="29" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#1130#1131#0" expanded="true" />
+                    <element signature="e#1166#1167#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Anchor.class" pinned="false" current-in-tab="false">
+            <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/d8f23de0ee690a2ea58daaeb447fb713/jars/classes.jar!/com/google/ar/core/Anchor.class">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-294">
+                  <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+                  <folding>
+                    <marker date="1526219543568" expanded="false" signature="0:104" ph="/.../" />
+                    <marker date="1526219543568" expanded="true" signature="306:376" ph="{...}" />
+                    <marker date="1526219543568" expanded="true" signature="401:469" ph="{...}" />
+                    <marker date="1526219543568" expanded="true" signature="510:737" ph="{...}" />
+                    <marker date="1526219543568" expanded="false" signature="764:775" ph=" { " />
+                    <marker date="1526219543568" expanded="false" signature="825:831" ph=" }" />
+                    <marker date="1526219543568" expanded="true" signature="880:1015" ph="{...}" />
+                    <marker date="1526219543568" expanded="true" signature="1043:1131" ph="{...}" />
+                    <marker date="1526219543568" expanded="true" signature="1177:1299" ph="{...}" />
+                    <marker date="1526219543568" expanded="true" signature="1338:1435" ph="{...}" />
+                    <marker date="1526219543568" expanded="true" signature="1494:1629" ph="{...}" />
+                    <marker date="1526219543568" expanded="false" signature="1655:1666" ph=" { " />
+                    <marker date="1526219543568" expanded="false" signature="1730:1736" ph=" }" />
+                    <marker date="1526219543568" expanded="true" signature="2181:3398" ph="{...}" />
+                    <marker date="1526219543568" expanded="false" signature="2702:2717" ph=" { " />
+                    <marker date="1526219543568" expanded="false" signature="2740:2750" ph=" }" />
+                    <marker date="1526219543568" expanded="false" signature="2790:2805" ph=" { " />
+                    <marker date="1526219543568" expanded="false" signature="2832:2842" ph=" }" />
+                    <marker date="1526219543568" expanded="true" signature="2910:3392" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ObjectRenderer.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/rendering/ObjectRenderer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="378">
+                  <caret line="40" column="27" lean-forward="false" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="27" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#15818#15819#0" expanded="true" />
+                    <element signature="e#15866#15867#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/MainActivity.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="303">
+                  <caret line="109" column="48" lean-forward="false" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
+                  <folding>
+                    <element signature="e#18770#19107#0" expanded="true" />
+                    <element signature="e#19106#19107#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -2591,7 +2609,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971016" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34410843" sideWeight="0.863124" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34410843" sideWeight="0.863124" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -3089,29 +3107,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/common/global/ObjectRendering.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="434">
+          <caret line="31" column="8" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1130#1131#0" expanded="true" />
+            <element signature="e#1166#1167#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/project/tpi/oroa/bhie/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="354" column="51" lean-forward="true" selection-start-line="354" selection-start-column="51" selection-end-line="354" selection-end-column="51" />
+        <state relative-caret-position="303">
+          <caret line="109" column="48" lean-forward="false" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
           <folding>
-            <element signature="e#5809#7061#0" expanded="true" />
-            <element signature="e#7060#7061#0" expanded="true" />
-            <element signature="e#18701#18920#0" expanded="true" />
-            <element signature="e#18919#18920#0" expanded="true" />
-            <element signature="e#18984#19321#0" expanded="true" />
-            <element signature="e#19320#19321#0" expanded="true" />
-            <element signature="e#19452#19657#0" expanded="true" />
-            <element signature="e#19656#19657#0" expanded="true" />
-            <element signature="e#19746#20056#0" expanded="true" />
-            <element signature="e#20055#20056#0" expanded="true" />
+            <element signature="e#18770#19107#0" expanded="true" />
+            <element signature="e#19106#19107#0" expanded="true" />
           </folding>
         </state>
       </provider>

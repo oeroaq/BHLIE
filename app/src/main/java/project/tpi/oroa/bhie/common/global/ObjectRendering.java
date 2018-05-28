@@ -11,15 +11,25 @@ import java.io.IOException;
 import project.tpi.oroa.bhie.common.rendering.ObjectRenderer;
 
 public class ObjectRendering {
-    public  Anchor anchor = null;
+    public  Anchor anchor;
     public  String nameObject;
     private final float[] centerVertexOfCube = {0f, 0f, 0f, 1};
     private final float[] vertexResult = new float[4];
     private final float objectHitAreaRadius = 0.2f;
-    public ObjectRenderer virtualObject;
+    private ObjectRenderer virtualObject;
 
-    public boolean isTapInObject(MotionEvent tap){
-        return isMVPMatrixHitMotionEvent(this.virtualObject.getModelViewProjectionMatrix(),  tap);
+    public boolean isTapInObject(MotionEvent tap, ObjectRenderer virtualObject){
+        return isMVPMatrixHitMotionEvent(virtualObject.getModelViewProjectionMatrix(),  tap);
+    }
+
+    public void setVirtualObject(Context context) throws IOException {
+        this.virtualObject = new ObjectRenderer();
+        this.virtualObject.createOnGlThread(context, "models/"+ this.nameObject + ".obj", "models/"+ this.nameObject + ".png");
+        this.virtualObject.setMaterialProperties(0.0f, 2.0f, 0.5f, 6.0f);
+    }
+
+    public ObjectRenderer getVirtualObject() {
+        return virtualObject;
     }
 
     private boolean isMVPMatrixHitMotionEvent(float[] ModelViewProjectionMatrix, MotionEvent event) {
