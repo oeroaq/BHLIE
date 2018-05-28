@@ -12,6 +12,8 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -105,6 +107,7 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
 
         scorePositiveText = findViewById(R.id.scorePositiveText);
         scoreNegativeText = findViewById(R.id.scoreNegativeText);
+        final ImageButton button = findViewById(R.id.MenuLevel);
         surfaceView = findViewById(R.id.surfaceview);
         displayRotationHelper = new DisplayRotationHelper(/*context=*/ this);
         mRotationDetector = new RotationGestureDetectorHelper(this);
@@ -511,5 +514,10 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
         GlobalClass.rotateF = GlobalClass.rotateF + angle / 10;
     }
 
-
+    void onClickMenu(View v) {
+        anchors.clear();
+        objectNumber = 0;
+        scorePositive = 0;
+        scoreNegative = 0;
+    }
 }
