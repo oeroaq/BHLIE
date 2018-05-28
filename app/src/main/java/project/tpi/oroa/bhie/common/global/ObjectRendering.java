@@ -18,13 +18,16 @@ public class ObjectRendering {
     private final float objectHitAreaRadius = 0.2f;
     private ObjectRenderer virtualObject;
 
-    public boolean isTapInObject(MotionEvent tap, ObjectRenderer virtualObject){
-        return isMVPMatrixHitMotionEvent(virtualObject.getModelViewProjectionMatrix(),  tap);
+    public boolean isTapInObject(MotionEvent tap){
+        return isMVPMatrixHitMotionEvent(this.virtualObject.getModelViewProjectionMatrix(),  tap);
     }
 
     public void setVirtualObject(Context context) throws IOException {
         this.virtualObject = new ObjectRenderer();
-        this.virtualObject.createOnGlThread(context, "models/"+ this.nameObject + ".obj", "models/"+ this.nameObject + ".png");
+        String diffuseTexture = "models/"+ this.nameObject + ".png";
+        if(this.nameObject.contains("word"))
+            diffuseTexture = "models/word.png";
+        this.virtualObject.createOnGlThread(context, "models/"+ this.nameObject + ".obj", diffuseTexture);
         this.virtualObject.setMaterialProperties(0.0f, 2.0f, 0.5f, 6.0f);
     }
 

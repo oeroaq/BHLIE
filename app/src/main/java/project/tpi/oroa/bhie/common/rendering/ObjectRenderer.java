@@ -118,12 +118,11 @@ public class ObjectRenderer {
 
     /**
      * Creates and initializes OpenGL resources needed for rendering the model.
-     *
-     * @param context                 Context for loading the shader and below-named model and texture assets.
+     *  @param context                 Context for loading the shader and below-named model and texture assets.
      * @param objAssetName            Name of the OBJ file containing the model geometry.
      * @param diffuseTextureAssetName Name of the PNG file containing the diffuse texture map.
      */
-    public void createOnGlThread(Context context, String objAssetName, String diffuseTextureAssetName)
+    public String createOnGlThread(Context context, String objAssetName, String diffuseTextureAssetName)
             throws IOException {
         final int vertexShader =
                 ShaderUtil.loadGLShader(TAG, context, GLES20.GL_VERTEX_SHADER, VERTEX_SHADER_NAME);
@@ -235,6 +234,7 @@ public class ObjectRenderer {
         ShaderUtil.checkGLError(TAG, "OBJ buffer load");
 
         Matrix.setIdentityM(modelMatrix, 0);
+        return objAssetName;
     }
 
     /**

@@ -83,14 +83,13 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
 
     // Temporary matrix allocated here to reduce number of allocations for each frame.
     private final float[] anchorMatrix = new float[16];
-
+    private final int maxObjects = 7;
     // Tap handling and UI.
-    private final BlockingQueue<MotionEvent> queuedSingleTaps = new ArrayBlockingQueue<>(16);
+    private final BlockingQueue<MotionEvent> queuedSingleTaps = new ArrayBlockingQueue<>(maxObjects);
     private final ArrayList<ObjectRendering> anchors = new ArrayList<>();
     private RotationGestureDetectorHelper mRotationDetector;
     private int mPtrCount = 0;
     private MotionEvent motionEvent;
-    private String objName = "models/free3Dmodel.obj", textureName = "models/andy.png";
     private boolean isObjReplaced;
     private ScaleGesturesHelper scaleGestureDetector;
 
@@ -302,21 +301,12 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
     public void onSurfaceChanged(GL10 gl, int width, int height) {
         displayRotationHelper.onSurfaceChanged(width, height);
         GLES20.glViewport(0, 0, width, height);
+        GlobalClass.viewHeight = height;
+        GlobalClass.viewWidth = width;
     }
 
     @Override
     public void onDrawFrame(GL10 gl) {
-
-        if (isObjReplaced) {
-            isObjReplaced = false;
-            try {
-                virtualObject.createOnGlThread(this, objName, textureName);
-                virtualObject.setMaterialProperties(0.0f, 2.0f, 0.5f, 6.0f);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return;
-        }
 
         // Clear screen to notify driver it should not load any pixels from previous frame.
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
@@ -348,13 +338,29 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
                             || (trackable instanceof Point
                             && ((Point) trackable).getOrientationMode()
                             == Point.OrientationMode.ESTIMATED_SURFACE_NORMAL)) {
-                        ObjectRendering object = new ObjectRendering();
                         if (anchors.size() == 0) {
-                            object.anchor = hit.createAnchor();
-                            object.nameObject = "andy";
-                            object.setVirtualObject(this);
+                            Anchor anchor = hit.createAnchor();
+                            for (int i = 0; i < maxObjects; i++) {
+                                ObjectRendering object = new ObjectRendering();
+                                object.nameObject = "word_" + i;
+                                if (i == 0) {
+                                    object.nameObject = "andy";
+                                }
+                                object.anchor = anchor;
+                                object.setVirtualObject(this);
+                                anchors.add(object);
+                            }
+
                         }
-                        anchors.add(object);
+                        else {
+                            for(ObjectRendering object : anchors){
+                                if(object.isTapInObject(tap)){
+                                    Log.e(TAG,object.nameObject);
+                                }
+                            }
+
+                        }
+
                         break;
                     }
                 }
@@ -415,6 +421,7 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
                 // Update and draw the model and its shadow.
                 object.getVirtualObject().updateModelMatrix(anchorMatrix, GlobalClass.scaleFactor);
                 object.getVirtualObject().draw(viewmtx, projmtx, lightIntensity);
+
             }
 
 
@@ -457,7 +464,7 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
                 new Runnable() {
                     @Override
                     public void run() {
-                        showSnackbarMessage("Searching for surfaces...", false);
+                        showSnackbarMessage("Buscando superficies...", false);
                     }
                 });
     }
