@@ -7,13 +7,15 @@
 - Fernando Vargas: fevargasmo
 
 ## Objetivos
-Aplicar los conocimientos vistos en la materia [Computaci髇 Visual](https://visualcomputing.github.io/) a realidad aumentada. Se enfatiza en el uso de Shaders e interactividad. 
+Aplicar los conocimientos vistos en la materia [Computaci贸n Visual](https://visualcomputing.github.io/) a realidad aumentada. Se enfatiza en el uso de Shaders e interactividad. 
 
-## Descripci髇 del desarrollo
-La aplicaci髇 se desarrolla en Android Studio y la librer韆 de realidad aumentada de Google [ARcore](https://developers.google.com/ar/discover/). Se utilizan los Shaders para los objetos en 3D visualizados, ya que la aplicaci髇 es completamente en 3D y para su interacci髇 se debe mapear los touch en 2D de la pantalla a coordenadas 3D en el espacio. Se interactua con los objetos al seleccionarlos para el funcionamiento del objetivo de la aplicaci髇, como tambi閚 rotarlos y visualizarlos en cualquier angulo.
+## Descripci贸n del desarrollo
+La aplicaci贸n se desarrolla en Android Studio y la librer铆a de realidad aumentada de Google [ARcore](https://developers.google.com/ar/discover/). Se utilizan los Shaders para los objetos en 3D visualizados, ya que la aplicaci贸n es completamente en 3D y para su interacci贸n se debe mapear los touch en 2D de la pantalla a coordenadas 3D en el espacio. Se interactua con los objetos al seleccionarlos para el funcionamiento del objetivo de la aplicaci贸n, como tambi茅n rotarlos y visualizarlos en cualquier angulo.
 
-## Discusi髇 de los resultados
+## Discusi贸n de los resultados
+Al trabajar con Android Studio y la libreria ARcore de Google, el proceso y uso de shaders e interacci贸n, y todo el contexto visual de los objetos, se hace m谩s facil, ya que facilita algunos metodos para el trato de ellos. Sin embargo, al investigar algunos usos e implementaciones, las soluciones estan dadas para Unity, el entorno enfocado a videojuegos, asi que en esa plataforma se ha fortalecido mas el uso de ediciones visuales y realidad aumentada.
 ## Trabajo futuro
+Como trabajo futuro queda finalizar la aplicaci贸n. a帽adiendo algo m谩s de funcionalidad relacionada con la dislexia, expandiendo m谩s herramientas para su detecci贸n y formalizando la aplicacion a un uso masivo.
 ## Referencias
- [ARcore](https://developers.google.com/ar/discover/)
- [Computaci髇 Visual](https://visualcomputing.github.io/)
+ - [ARcore](https://developers.google.com/ar/discover/)
+ - [Computaci贸n Visual](https://visualcomputing.github.io/)
