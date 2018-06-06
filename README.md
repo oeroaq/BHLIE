@@ -22,5 +22,5 @@ Al trabajar con Android Studio y la libreria ARcore de Google, el proceso y uso 
 ## Trabajo futuro
 Como trabajo futuro queda finalizar la aplicación, añadiendo algo más de funcionalidad relacionada con la dislexia, expandiendo más herramientas para su detección y formalizando la aplicacion a un uso masivo.
 ## Referencias
- - [ARcore](https://developers.google.com/ar/discover/)
- - [Computación Visual](https://visualcomputing.github.io/)
+ - [Google ARcore](https://developers.google.com/ar/discover/)
+ - [VisualComputing](https://visualcomputing.github.io/)
