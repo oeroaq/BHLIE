@@ -1,6 +1,7 @@
 package project.tpi.oroa.bhie;
 
 import android.annotation.SuppressLint;
+import android.media.MediaPlayer;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
@@ -82,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
 
     // Temporary matrix allocated here to reduce number of allocations for each frame.
     private final float[] anchorMatrix = new float[16];
-    private final int maxObjects = 7;
+    private final int maxObjects = 1;
     private int objectNumber = 0;
     private int scorePositive = 0;
     private int scoreNegative = 0;
@@ -362,8 +363,14 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
                             objectNumber++;
 
                         } else {
+                            final MediaPlayer mp = MediaPlayer.create(this, R.raw.hola);
                             for (ObjectRendering object : anchors) {
-                                if (object.numberObject != 0) {
+                                Log.d("myTag", "numero es "+ object.numberObject);
+                                if (object.numberObject == 0 && object.isTapInObject(tap) ) {
+                                    Log.d("myTag", "Tocando a la muñeca sin if");
+                                    mp.start();
+                                }
+                                else if (object.numberObject != 0) {
                                     if (object.isTapInObject(tap)) {
                                         if (object.numberObject % 2 != 0)
                                             scorePositive++;
@@ -447,8 +454,10 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
                 float scale = GlobalClass.scaleFactor;
                 if (object.numberObject == 0)
                     scale = 0.0009f;
+
                 object.getVirtualObject().updateModelMatrix(anchorMatrix, scale);
                 object.getVirtualObject().draw(viewmtx, projmtx, lightIntensity);
+
 
             }
 
