@@ -12,11 +12,11 @@
         android:required="true" />
 
     <application
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="false">
         <activity android:name=".Kids.ChooseLevelActivity"></activity>
