@@ -1,6 +1,7 @@
 package project.tpi.oroa.bhie;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.media.MediaPlayer;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
@@ -64,7 +65,7 @@ import java.util.concurrent.BlockingQueue;
  * ARCore API. The application will display any detected planes and will allow the user to tap on a
  * plane to place a 3d model of the Android robot.
  */
-public class MainActivity extends AppCompatActivity implements GLSurfaceView.Renderer, RotationGestureDetectorHelper.OnRotationGestureListener {
+public class MainActivity extends Activity implements GLSurfaceView.Renderer, RotationGestureDetectorHelper.OnRotationGestureListener {
     private static final String TAG = MainActivity.class.getSimpleName();
 
     // Rendering. The Renderers are created here, and initialized when the GL surface is created.

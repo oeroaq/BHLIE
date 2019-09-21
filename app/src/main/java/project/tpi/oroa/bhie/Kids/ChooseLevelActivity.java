@@ -21,7 +21,7 @@ public class ChooseLevelActivity extends Activity {
     {
         try {
             Intent k = new Intent(ChooseLevelActivity.this, MainActivity.class);
-            k.setFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET); 
+            k.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(k);
         } catch(Exception e) {
             e.printStackTrace();
