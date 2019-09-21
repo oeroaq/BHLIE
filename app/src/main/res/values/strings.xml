@@ -3,7 +3,7 @@
     <string name="palabras_correctas_0">Palabras correctas: 0</string>
     <string name="palabras_incorrectas_0">Palabras incorrectas: 0</string>
     <string name="todo">TODO</string>
-    <string name="title_activity_iinitial_menu_kids">IinitialMenuKids</string>
+    <string name="title_activity_iinitial_menu_kids">Seeker Heroes</string>
     <string name="title_activity_login_kids">Sign in</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
