@@ -1,11 +1,12 @@
 package project.tpi.oroa.bhie.Kids;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import project.tpi.oroa.bhie.R;
 
-public class CreateSuperHeroActivity extends AppCompatActivity {
+public class CreateSuperHeroActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

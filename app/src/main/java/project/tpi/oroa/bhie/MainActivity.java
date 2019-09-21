@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
     private TextView scorePositiveText;
     private TextView scoreNegativeText;
 
-    @SuppressLint("ClickableViewAccessibility")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

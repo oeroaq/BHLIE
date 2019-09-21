@@ -19,7 +19,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="false">
-        <activity android:name=".Kids.ChooseGameActivity"></activity>
+        <activity android:name=".Kids.ChooseLevelActivity"></activity>
+        <activity android:name=".Kids.ChooseGameActivity" />
         <activity android:name=".Kids.SuperHeroActivity" />
         <activity android:name=".Kids.CreateSuperHeroActivity" />
         <activity

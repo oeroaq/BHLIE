@@ -8,7 +8,6 @@
     tools:context="project.tpi.oroa.bhie.MainActivity">
 
 
-
     <android.opengl.GLSurfaceView
     android:id="@+id/surfaceview"
     android:layout_width="fill_parent"

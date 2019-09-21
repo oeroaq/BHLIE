@@ -3,7 +3,7 @@
     xmlns:tools = "http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height = "match_parent"
     android:background="@color/white"
-    tools:context=".Kids.ChooseGameActivity">
+    tools:context=".Kids.ChooseLevelActivity">
 
     <TextView
         android:text = "SeekerHeroes"
@@ -27,12 +27,11 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Luisa Fernanda"
+        android:text="Jugar !!"
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@+id/textview"
         android:layout_toStartOf="@+id/textview"
-        android:onClick="onClickChooseLevel"/>
-
+        android:onClick="onClickLevel"/>
 
 </RelativeLayout>
