@@ -1,47 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
-    xmlns:tools = "http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height = "match_parent"
-    android:background="@color/white"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    style="@style/loginParent"
     tools:context=".Kids.ChooseLevelActivity">
+    <ScrollView
+        style="@style/parent">
+        <RelativeLayout
+            style="@style/parent">
+            <LinearLayout
+                android:id="@+id/LinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:weightSum="12">
+                <LinearLayout
+                    style="@style/parent"
+                    android:background="@drawable/login_shape_bk"
+                    android:orientation="vertical"
+                    android:layout_weight="3">
+                    <ImageView
+                        style="@style/parent"
+                        android:background="@drawable/ic_login_bk"
+                        android:contentDescription="login background" />
+                </LinearLayout>
+            </LinearLayout>
 
-    <TextView
-        android:text = "SeekerHeroes"
-        android:layout_width="wrap_content"
-        android:layout_height = "wrap_content"
-        android:id = "@+id/textview1"
-        android:textSize = "35dp"
-        android:layout_alignParentTop = "true"
-        android:layout_centerHorizontal = "true" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_below="@+id/LinearLayout"
+                android:layout_alignEnd="@id/LinearLayout">
+                <TextView
+                    style="@style/headerText"
+                    android:layout_gravity="center"
+                    android:text="Seeker Heroes"
+                    android:layout_marginTop="40dp"/>
 
-    <TextView
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
-        android:text = "Escoge un nivel y juega!"
-        android:id = "@+id/textView2"
-        android:layout_below = "@+id/textview1"
-        android:layout_centerHorizontal = "true"
-        android:textColor = "#000000"
-        android:textSize = "35dp" />
+                <LinearLayout
+                    style="@style/linearParent"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/loginViewsMargin"
+                    android:layout_marginTop="260px">
 
-    <TextView
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
-        android:text = "1"
-        android:id = "@+id/textView3"
-        android:layout_below = "@+id/textView2"
-        android:layout_centerHorizontal = "true"
-        android:textColor = "#0000ff"
-        android:textSize = "35dp" />
+                    <TextView
+                        android:layout_width = "wrap_content"
+                        android:layout_height = "wrap_content"
+                        android:text = "Escoge un nivel y juega!"
+                        android:id = "@+id/textView"
+                        android:textColor = "#000000"
+                        android:textSize = "20dp"
+                        android:textAlignment="center"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Jugar !!"
-        android:id="@+id/button"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/textview"
-        android:layout_toStartOf="@+id/textview"
-        android:onClick="onClickLevel"/>
+                    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:id="@+id/GridLayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:columnCount="1"
+                        android:rowCount="1"
+                        android:orientation="horizontal"
+                     >
+                        <TextView
+                            android:layout_width = "match_parent"
+                            android:layout_height = "match_parent"
+                            android:text = "1"
+                            android:layout_marginTop="15px"
+                            android:textColor = "@color/colorPrimary"
+                            android:textSize = "20dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width = "match_parent"
+                            android:layout_height = "wrap_content"
+                            android:text = "2"
+                            android:layout_marginTop="15px"
+                            android:textColor = "#000000"
+                            android:textSize = "20dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width = "match_parent"
+                            android:layout_height = "wrap_content"
+                            android:text = "3"
+                            android:layout_marginTop="15px"
+                            android:textColor = "#000000"
+                            android:textSize = "20dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width = "match_parent"
+                            android:layout_height = "wrap_content"
+                            android:text = "4"
+                            android:layout_marginTop="15px"
+                            android:textColor = "#000000"
+                            android:textSize = "20dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width = "match_parent"
+                            android:layout_height = "wrap_content"
+                            android:text = "5"
+                            android:layout_marginTop="15px"
+                            android:textColor = "#000000"
+                            android:textSize = "20dp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width = "match_parent"
+                            android:layout_height = "wrap_content"
+                            android:text = "6"
+                            android:textColor = "#000000"
+                            android:layout_marginTop="15px"
+                            android:textSize = "20dp"
+                            android:textAlignment="center"/>
+                    </GridLayout>
 
+                    <Button
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="196dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        android:text="Jugar!"
+                        android:onClick="onClickLevel"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

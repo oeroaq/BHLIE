@@ -1,40 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
-    xmlns:tools = "http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height = "match_parent"
-    android:background="@color/white"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    style="@style/loginParent"
     tools:context=".Kids.InitialMenuKidsActivity">
+    <ScrollView
+        style="@style/parent">
+        <RelativeLayout
+            style="@style/parent">
+            <LinearLayout
+                android:id="@+id/LinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:weightSum="12">
+                <LinearLayout
+                    style="@style/parent"
+                    android:background="@drawable/login_shape_bk"
+                    android:orientation="vertical"
+                    android:layout_weight="3">
+                    <ImageView
+                        style="@style/parent"
+                        android:background="@drawable/ic_login_bk"
+                        android:contentDescription="login background" />
+                </LinearLayout>
+            </LinearLayout>
 
-    <TextView
-        android:text = "SeekerHeroes"
-        android:layout_width="wrap_content"
-        android:layout_height = "wrap_content"
-        android:id = "@+id/textview"
-        android:textSize = "35dp"
-        android:layout_alignParentTop = "true"
-        android:layout_centerHorizontal = "true" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_below="@+id/LinearLayout"
+                android:layout_alignEnd="@id/LinearLayout">
+                <TextView
+                    style="@style/headerText"
+                    android:layout_gravity="center"
+                    android:text="Seeker Heroes"
+                    android:layout_marginTop="40dp"/>
+
+                <LinearLayout
+                    style="@style/linearParent"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/loginViewsMargin"
+                    android:layout_marginTop="260px">
+
+                    <TextView
+                        android:layout_width = "match_parent"
+                        android:layout_height = "wrap_content"
+                        android:text = "Hola Luisa, puedes personalizar tu personaje"
+                        android:id = "@+id/textView"
+                        android:textColor = "#000000"
+                        android:textSize = "20dp"
+                        android:layout_marginBottom="10px"
+                        android:textAlignment="center"/>
 
 
-    <TextView
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
-        android:text = "Hola Luisa, puedes personalizar tu personaje"
-        android:id = "@+id/textView"
-        android:layout_below = "@+id/textview"
-        android:layout_centerHorizontal = "true"
-        android:textColor = "#000000"
-        android:textSize = "35dp" />
+                    <Button
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="196dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        android:onClick="onClickChooseGame"
+                        android:text="Continuar" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Continuar"
-        android:id="@+id/button"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/textview"
-        android:layout_toStartOf="@+id/textview"
-        android:onClick="onClickChooseGame" />
+                </LinearLayout>
+            </LinearLayout>
 
-
-
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

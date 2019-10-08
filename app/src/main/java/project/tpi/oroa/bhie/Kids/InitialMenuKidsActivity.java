@@ -37,4 +37,15 @@ public class InitialMenuKidsActivity extends Activity {
     }
 
 
+    public void onClickChooseGame(View v)
+    {
+        try {
+            Intent k = new Intent(InitialMenuKidsActivity.this, ChooseGameActivity.class);
+            startActivity(k);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
