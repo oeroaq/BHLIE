@@ -84,7 +84,7 @@ public class MainActivity extends Activity implements GLSurfaceView.Renderer, Ro
 
     // Temporary matrix allocated here to reduce number of allocations for each frame.
     private final float[] anchorMatrix = new float[16];
-    private final int maxObjects = 1;
+    private final int maxObjects = 7;
     private int objectNumber = 0;
     private int scorePositive = 0;
     private int scoreNegative = 0;
