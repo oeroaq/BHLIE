@@ -14,6 +14,7 @@ public class ChooseGameActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_game);
+        getActionBar().hide();
     }
 
     public void onClickChooseLevel(View v)

@@ -12,15 +12,15 @@
         android:required="true" />
 
     <application
-        android:roundIcon="@drawable/ic_launcher"
-        android:supportsRtl="true"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="false">
-        <activity android:name=".Kids.ChooseLevelActivity"></activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Kids.ChooseLevelActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".Kids.ChooseGameActivity" />
         <activity android:name=".Kids.SuperHeroActivity" />
         <activity android:name=".Kids.CreateSuperHeroActivity" />
@@ -30,6 +30,9 @@
         <activity
             android:name=".Kids.InitialMenuKidsActivity"
             android:label="@string/title_activity_iinitial_menu_kids" />
+        <activity
+            android:name=".Adult.InitialMenuAdultActivity"
+            android:label="@string/title_activity_login_kids" />
         <activity
             android:name=".InitialMenuActivity"
             android:configChanges="orientation|screenSize"

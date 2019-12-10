@@ -36,17 +36,37 @@
                 android:layout_marginLeft="30dp"
                 android:layout_below="@+id/LinearLayout"
                 android:layout_alignEnd="@id/LinearLayout">
-                <TextView
-                    style="@style/headerText"
-                    android:layout_gravity="center"
-                    android:text="Seeker Heroes"
-                    android:layout_marginTop="40dp"/>
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/list_item3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img1"
+                        style="@style/parent"
+                        android:layout_gravity="left"
+                        android:layout_width="111dp"
+                        android:layout_height="90dp"
+                        android:onClick="onClickLittleSuperHero"
+                        android:src="@drawable/ic_launcher" />
+                    <TextView
+                        android:id="@+id/tv1"
+                        style="@style/headerText"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:layout_toRightOf="@+id/img1"
+                        android:text="Seeker Heroes" />
+
+                </LinearLayout>
+
 
                 <LinearLayout
                     style="@style/linearParent"
                     android:layout_gravity="center"
                     android:padding="@dimen/loginViewsMargin"
-                    android:layout_marginTop="260px">
+                    android:layout_marginTop="160px">
 
                     <TextView
                         android:layout_width = "wrap_content"

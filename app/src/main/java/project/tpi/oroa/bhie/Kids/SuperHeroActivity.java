@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import project.tpi.oroa.bhie.R;
 
@@ -14,6 +16,12 @@ public class SuperHeroActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_super_hero);
+        getActionBar().hide();
+        String nombre = getIntent().getStringExtra("nombre");
+        TextView text2 = findViewById(R.id.textViewSuperHeroe);
+        String old = text2.getText().toString();
+        String newOne = old + " " + nombre;
+        text2.setText(newOne);
     }
 
     public void onClickChooseGame(View v)
